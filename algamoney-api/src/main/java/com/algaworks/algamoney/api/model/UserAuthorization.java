@@ -16,7 +16,6 @@ public class UserAuthorization {
 	
 	@Id
 	private Long id;
-	private String eu;
 	
 	private String name;
 	private String email;
