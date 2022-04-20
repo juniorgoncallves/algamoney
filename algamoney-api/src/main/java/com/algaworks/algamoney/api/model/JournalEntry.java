@@ -58,6 +58,10 @@ public class JournalEntry {
 	@JoinColumn(name = "id_person")
 	private Person person;
 	
+	private String annex;
+	
+	private String urlAnnex;
+	
 	@JsonIgnore
 	public boolean isIncome() {
 		return JournalEntryType.RECEITA.equals(entryType);
@@ -155,6 +159,22 @@ public class JournalEntry {
 		if (id != other.id)
 			return false;
 		return true;
+	}
+
+	public String getAnnex() {
+		return annex;
+	}
+
+	public void setAnnex(String annex) {
+		this.annex = annex;
+	}
+
+	public String getUrlAnnex() {
+		return urlAnnex;
+	}
+
+	public void setUrlAnnex(String urlAnnex) {
+		this.urlAnnex = urlAnnex;
 	}
 	
 	
