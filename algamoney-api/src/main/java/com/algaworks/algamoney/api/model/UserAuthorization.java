@@ -16,10 +16,12 @@ public class UserAuthorization {
 	
 	@Id
 	private Long id;
+	private String eu;
 	
 	private String name;
 	private String email;
 	private String password;
+	private Boolean active;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_authorization", joinColumns = @JoinColumn(name = "id_user"),
@@ -89,6 +91,14 @@ public class UserAuthorization {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
 	}
 	
 	
