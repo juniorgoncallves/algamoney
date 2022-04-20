@@ -1,0 +1,1 @@
+ALTER TABLE journal_entry add COLUMN annex VARCHAR(200);
