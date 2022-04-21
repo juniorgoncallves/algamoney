@@ -1,5 +1,6 @@
 package com.algaworks.algamoney.api.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,6 +13,9 @@ public class Authorization {
 	private Long id;
 	private String description;
 	
+	@Column(name = "authorization_type")
+	private Long authorizationType;
+	
 	public Long getId() {
 		return id;
 	}
@@ -23,6 +27,12 @@ public class Authorization {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Long getAuthorizationType() {
+		return authorizationType;
+	}
+	public void setAuthorizationType(Long authorizationType) {
+		this.authorizationType = authorizationType;
 	}
 	
 	@Override

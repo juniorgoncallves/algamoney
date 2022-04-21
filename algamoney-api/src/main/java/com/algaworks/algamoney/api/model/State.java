@@ -13,6 +13,8 @@ public class State {
 	
 	private String name;
 
+	private String uf;
+	
 	public Long getId() {
 		return id;
 	}
@@ -52,6 +54,14 @@ public class State {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public String getUf() {
+		return uf;
+	}
+
+	public void setUf(String uf) {
+		this.uf = uf;
 	}
 	
 }
